@@ -24,6 +24,13 @@ stage('integration test.') {
                 sh 'mvn clean install'
             }
         }
+        stage('static coad analysis') {
+            steps {
+                echo "sending artifact to sonar cube "
+                waitForQualityGate abortPipeline: false, credentialsId: 'sonarqu'
+                sh 'mvn clean package sonar:sonar'
+            }
+        }
 
     }
 }
