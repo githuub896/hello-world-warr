@@ -42,4 +42,22 @@
 			</plugin>
 		</plugins>
 	</build>
+
+	<!-- Distribution Management -->
+	<distributionManagement>
+		<repository>
+			<id>maven-releases</id>
+			<url>http://13.60.197.225:8081/repository/maven-releases/</url>
+		</repository>
+	</distributionManagement>
+
+	<!-- Repositories -->
+	<repositories>
+		<repository>
+			<id>maven-releases</id>
+			<name>maven-releases</name>
+			<url>http://13.60.197.225:8081/repository/maven-releases/</url>
+		</repository>
+	</repositories>
+
 </project>
